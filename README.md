@@ -45,6 +45,12 @@ The four examples of running optimization with python binding include [shape opt
 
 The objective and its gradient norm at each iteration are reported in the log. The simulation results are exported as [VTK format](https://docs.vtk.org/en/latest/design_documents/VTKFileFormats.html) and can be visualized in [Paraview](https://www.paraview.org). The transient result files have the format of `step_{t}`, where `t` is the time step; optimization result files have the format of `opt_state_{i}_iter_{j}`, where `i` is the ID of the simulation (in the case where multiple simulations are included), `j` is the iteration number of the optimization.
 
+To visualize the animated position:
+
+1. Filters > Calculator
+2. Coordindates Result: `coords + solution`
+3. Play
+
 ## Known issues
 
 1. Shape optimizations cannot have obstacles in the simulations. To get around, create a volumetric mesh of the obstacle and apply Dirichlet boundary conditions on the obstacle surface.
